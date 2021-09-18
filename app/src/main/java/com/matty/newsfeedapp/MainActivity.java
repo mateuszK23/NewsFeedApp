@@ -3,20 +3,17 @@ package com.matty.newsfeedapp;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.viewpager.widget.ViewPager;
-
 import android.os.Bundle;
-
 import com.google.android.material.tabs.TabItem;
 import com.google.android.material.tabs.TabLayout;
 
 public class MainActivity extends AppCompatActivity {
-    TabLayout tabLayout;
-    TabItem  iEntertainment, iHealth, iHome, iScience, iSports;
-    PagerAdapter pagerAdapter;
-    Toolbar toolBar;
 
-    String apiKey = "4dea7bb71575470e8f88390feb95369a";
-    
+    private TabLayout tabLayout;
+    private PagerAdapter pagerAdapter;
+    private Toolbar toolBar;
+    TabItem  iEntertainment, iHealth, iHome, iScience, iSports;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -58,10 +55,6 @@ public class MainActivity extends AppCompatActivity {
         });
 
         viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
-
-
-
-
 
     }
 }
